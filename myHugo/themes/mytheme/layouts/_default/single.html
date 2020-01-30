@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<div class="flex-container">
+     <div class="event-container-single">
+          <div class="event-flex-single">
+               <div class="event-content">
+                    <div class="event-title">
+                         <div><a href="{{.URL}}">{{.Title}}</a></div>
+                    </div>
+                    <p class="event-text">
+                         <span class="event-label">{{ if .Params.domain }} {{ .Params.domain }} {{ end }}</span>
+                         {{ if .Params.adress }} {{ .Params.adress }} {{ end }}
+                         <div class="p-text">{{ .Content }}</div>             
+                    </p>
+               </div>
+               <div class="event-img">
+                    <div>
+                         <img class="e-img" src="{{ .Params.photo }}" alt="">
+                    </div>
+               </div>
+          </div>
+     </div>    
+</div>
+
+{{ end }}

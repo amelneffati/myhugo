@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<div class="flex-container">
+    <div class="event-container">
+    {{ range where .Site.RegularPages "Section" "events" }}
+        {{ if lt (time .Params.when).Unix now.Unix }}
+        <div class="event-flex">
+            <div class="event-content">
+                <div class="event-title">
+                    <div><a href="{{.URL}}">{{.Title}}</a></div>
+                </div>
+                <p class="event-text">
+                    <span class="event-label">{{ .Params.label }}</span>
+                    <br>{{.Summary}}
+                </p>
+                <div class="event-date">{{ dateFormat "2006-01-02" .Params.when }}</div>
+            </div>
+            <div class="event-img">
+                <div>
+                    <img class="e-img" src="{{ .Params.photos }}" alt="">
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    {{ end }}
+    </div>   
+</div>
+
+{{ end }}

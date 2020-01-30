@@ -1,0 +1,31 @@
+{{ define "main" }}
+<h1 class="m-c">Les évènements à venir</h1>
+
+<div class="flex-container">
+    <div class="event-container-single">
+    {{ range where .Site.RegularPages "Section" "events" }}
+        {{ if ne .Params.NotEvent true }}
+        {{ if gt (time .Params.when).Unix now.Unix }}
+        <div class="event-flex-single">
+            <div class="event-content">
+                <div class="event-title">
+                    <div><a href="{{.URL}}">{{.Title}}</a></div>
+                </div>
+                <div class="event-date">Posté le {{ dateFormat "2006-01-02" .Params.when }}</div>
+                <p class="event-text">
+                    <span class="event-label">{{ .Params.label }}</span> — {{.Summary}}
+                </p>
+            </div>
+            <div class="event-img">
+                <div>
+                    <img class="e-img" src="{{ .Params.photos }}" alt="">
+                </div>
+            </div>
+        </div>
+        {{ end }}
+        {{ end }}
+    {{ end }}
+    </div>      
+</div>
+
+{{ end }}

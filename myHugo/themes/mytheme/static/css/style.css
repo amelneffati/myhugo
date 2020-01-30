@@ -1,0 +1,295 @@
+* {
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.level {
+    margin-bottom: 4rem;
+}
+
+html, body {
+	height: 100%;
+	margin: 0; padding: 0;
+}
+body {
+	display : table;
+	width: 100%;
+}
+
+.navbar {
+margin-top: 2rem;
+}
+
+.navbar-item img {
+max-height: none;
+width: 225px;
+}
+
+.button.is-primary {
+background-color: #216093;
+border-color: transparent;
+color: #fff;
+}
+
+.navbar-item, .navbar-link {
+text-transform: uppercase;
+font-size: 14px;
+font-weight: 500;
+}
+
+.button.is-primary, .button.is-light {
+text-transform: uppercase;
+font-size: 13px;
+}
+
+
+.navbar-menu {
+margin-right: 2rem;
+}
+
+.navbar-start {
+margin-left: 0.2rem;
+}
+
+
+.open {
+color: #216093;
+font-weight: 700;
+}
+
+
+
+footer {
+display : table-row;
+height: 6.5rem;
+width: 100%;
+text-transform: uppercase;
+font-size: 9px;
+margin-top: 8rem;
+}
+
+.footer {
+background-color: #f5f5f5;
+padding: 2rem 1.5rem 2rem;
+}
+
+footer a {
+color: #216093;
+}
+
+.others-left {
+    margin-bottom: 1rem;
+}
+
+.others-adress {
+    font-family: Open-Sans, sans-serif;
+    font-size: 12px;
+} 
+
+.others-flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.others-img {
+    max-width: 80px;
+    margin-left: 6px;
+}
+
+.others-link{
+    font-size: 14px;
+}
+.others {
+    padding-right: 4rem;
+    margin-top: 3rem;
+}
+
+.others-separator {
+    clear: both;
+    position: relative;
+    display: block;
+    border-top: 1px solid #d6d6d6;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.others-title {
+    color: #e81f3f;
+    font-family: Open-Sans, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+a {
+    color: #216093;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #216093;
+}
+
+.flex-container {
+display: flex;
+}
+
+.separator {
+    clear: both;
+    position: relative;
+    display: block;
+    padding: 15px 0;
+    border-top: 1px solid #d6d6d6;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.event-date {
+    color: darkgrey;
+    font-size: 12px;
+    margin-top: 0.5rem;
+}
+
+.event-text {
+    font-size: 14px;
+    text-align: justify;
+}
+
+.event-container {
+    font-family: "Open-Sans", sans-serif;
+    width: 80%;
+}
+
+
+.event-container-single {
+    font-family: "Open-Sans", sans-serif;
+    width: 100%;
+}
+
+.event-title {
+    color: #216093;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;   
+    margin-bottom: 0.5rem; 
+}
+
+.event-label {
+    color: #216093;
+    font-size: 13px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.event-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    padding: 4rem;
+}
+
+.event-flex-single {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.event-flex-single-mc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+}
+
+.event-icons {
+    display: flex;
+    width: 15%;
+    flex-direction: row;
+    justify-content: space-between;
+    color: lightgrey;
+    margin-top: 1rem;   
+}
+
+.event-img {
+    margin-left: 2rem;
+}
+.e-img {
+    max-width: 240px;
+
+}
+
+/* Municipal Council */
+.role {
+font-size: 12px;
+text-align: center;
+font-weight: 700;
+font-family: Open-Sans, sans-serif;
+}
+
+.m-c {
+font-size: 15px;
+padding-left: 4rem;
+padding-top: 4rem;
+padding-bottom: 0.5rem;
+}
+
+.circle {
+width: 120px;
+height: 120px;
+border-radius: 100%;
+box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14);
+margin-right: 0.5rem;
+margin-top: 2rem;
+}
+
+.heading {
+font-size: 12px;
+margin-top: 1rem;
+font-family: Montserrat,sans-serif;
+}
+
+.infos {
+text-align: justify
+}
+
+ul {
+list-style-type: none;
+margin-left: 0;
+padding-left: 0;
+margin-top: -1rem;
+font-size: 13px;
+}
+
+li {
+margin-bottom: 2px;
+}
+
+.team .title {
+font-size: 20px;
+margin: 4rem;
+margin-bottom: 2rem;
+}
+
+.team {
+margin-bottom: 2rem;
+}
+
+.p-text {
+    text-align: justify;
+    font-size: 13px;
+    margin-top: 1rem;
+    max-height: 193px;
+    overflow: scroll;
+}
+  

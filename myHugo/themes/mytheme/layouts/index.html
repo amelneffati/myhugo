@@ -1,0 +1,46 @@
+    {{ define "main" }}
+    <div class="others" style="margin: 2rem;">
+        <div class="others-title">À l'honneur</div>
+        <div class="others-separator"></div>
+        {{ range where .Site.RegularPages "Section" "associations" }}
+            {{ if eq .Params.important true }}
+            <div class="others-flex-container">
+                <div class="others-left">
+                    <div class="others-link"><a href="{{.URL}}">{{.Title}}</a></div>
+                    <div class="others-adress">{{ .Params.adress }}</div>
+                </div>
+                <div class="others-right">
+                    <img class="others-img" src="{{ .Params.photo }}" alt="">
+                </div>
+            </div>
+            {{ end }}
+        {{ end }}
+    </div>  
+    <div class="flex-container">
+        <div class="event-container">
+        {{ range (sort (where .Site.RegularPages "Section" "events") ".Params.when") }}
+            {{ if eq .Params.important true }}
+            {{ if ne .Params.NotEvent true }}
+            <div class="event-flex">
+                <div class="event-content">
+                    <div class="event-title">
+                        <div><a href="{{.URL}}">{{.Title}}</a></div>
+                    </div>
+                    <div class="event-date">Posté le {{ dateFormat "2006-01-02" .Params.when }}</div>
+                    <p class="event-text">
+                        <span class="event-label">{{ .Params.label }}</span> — {{.Summary}}
+                    </p>
+                </div>
+                <div class="event-img">
+                    <div>
+                        <img class="e-img" src="{{ .Params.photos }}" alt="">
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+        {{ end }}
+        </div>      
+    </div>
+
+    {{ end }}

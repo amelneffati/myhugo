@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+{{ partial "presentation" . }}
+
+<h1 class="m-c">Le conseil municipal</h1>
+<div class="separator"></div>
+
+<div class="container">
+    <nav class="level">
+        {{ range where .Site.RegularPages "Section" "municipal-council" }}
+        <div class="level-item has-text-centered">
+            <div>
+                <img src="{{ .Params.photo }}" class="circle" style="filter: grayscale(1);">
+                <p class="heading">{{ .Params.firstNames }} {{ .Params.lastName }}</p>
+                <p class="role">{{ .Params.role }}</p>
+            </div>
+        </div>
+        {{ end }}
+    </nav>
+</div>
+
+
+{{ end }}
